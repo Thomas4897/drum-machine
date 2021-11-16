@@ -9,7 +9,8 @@ body {
 	justify-content: center;
 	margin: none;
 	flex-direction: column;
-	background-color: #81b29a;
+	background-color: black;
+	color: white;
 }
 
 .tip {
@@ -97,4 +98,10 @@ body {
 	display: flex;
 	align-items: center;
 	margin: 10px;
+}
+
+input[type="text"] {
+	width: 30px;
+	height: 17px;
+	margin-left: 5px;
 }

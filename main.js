@@ -22,10 +22,13 @@ const counter = document.querySelector(".counter");
 const metronomeCheck = document.querySelector("#metronome-drum");
 
 const kickDrumCheck = document.querySelector("#kick-drum");
+const kickDrumTiming = document.querySelector("#kick-drum-timing");
 
 const snareDrumCheck = document.querySelector("#snare-drum");
+const snareDrumTiming = document.querySelector("#snare-drum-timing");
 
 const hiHatCheck = document.querySelector("#hi-hat");
+const hiHatTiming = document.querySelector("#hi-hat-timing");
 
 //! This function is called every 600ms
 function update() {
@@ -35,16 +38,31 @@ function update() {
 		counter.innerHTML = tickCounter;
 	}
 
+	//! if kick-drum check play sound
 	if (kickDrumCheck.checked) {
-		kickDrum.play();
+		if (Number(kickDrumTiming.value) === tickCounter) {
+			kickDrum.play();
+		} else if (Number(kickDrumTiming.value) === 0) {
+			kickDrum.play();
+		}
 	}
 
+	//! if snare-drum check play sound
 	if (snareDrumCheck.checked) {
-		snareDrum.play();
+		if (Number(snareDrumTiming.value) === tickCounter) {
+			snareDrum.play();
+		} else if (Number(snareDrumTiming.value) === 0) {
+			snareDrum.play();
+		}
 	}
 
+	//! if hi-hat check play sound
 	if (hiHatCheck.checked) {
-		hiHat.play();
+		if (Number(hiHatTiming.value) === tickCounter) {
+			hiHat.play();
+		} else if (Number(hiHatTiming.value) === 0) {
+			hiHat.play();
+		}
 	}
 
 	//! Play the 'tick' sound for three beats
