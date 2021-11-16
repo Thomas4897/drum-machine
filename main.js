@@ -17,14 +17,12 @@ function update() {
 		counter.innerHTML = tickCounter;
 	}
 
+	//! Play the 'tick' sound for three beats
 	//! Play the 'tock' every fouth beat
-	if (tickCounter > 3) {
+	if (tickCounter % 4 === 0) {
 		tock.play();
 		tickCounter = 0;
-	}
-
-	//! Play the 'tick' sound
-	if (tickCounter < 4) {
+	} else {
 		tick.play();
 	}
 }
