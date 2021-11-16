@@ -18,6 +18,9 @@ let tickCounter = 0;
 //! Define the counter for metronome-counter
 const counter = document.querySelector(".counter");
 
+const setTempoText = document.querySelector("#set-tempo-text");
+const setTempoButton = document.querySelector("#set-tempo-button");
+
 //! Define the counter for metronome-counter
 const metronomeCheck = document.querySelector("#metronome-drum");
 
@@ -59,8 +62,10 @@ function update() {
 	//! if hi-hat check play sound
 	if (hiHatCheck.checked) {
 		if (Number(hiHatTiming.value) === tickCounter) {
+			hiHat.load();
 			hiHat.play();
 		} else if (Number(hiHatTiming.value) === 0) {
+			hiHat.load();
 			hiHat.play();
 		}
 	}
@@ -87,4 +92,10 @@ function setupUpdate() {
 }
 
 //! Call setupUpdate() once after 300ms
+
 setTimeout(setupUpdate, 300);
+
+// setTempoButton.addEventListener("click", function () {
+// 	// clearInterval(update());
+// 	setTimeout(setupUpdate, 300);
+// });

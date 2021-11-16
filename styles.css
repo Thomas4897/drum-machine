@@ -28,20 +28,20 @@ body {
 }
 
 .background-left {
-	border-bottom: 400px solid #e07a5f;
+	border-bottom: 400px solid #0e1874;
 	border-left: 100px solid transparent;
 }
 
 .background-center {
 	flex: 1;
-	background-color: #f2cc8f;
+	background-color: #171b3b;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
 
 .background-right {
-	border-bottom: 400px solid #e07a5f;
+	border-bottom: 400px solid #0c145e;
 	border-right: 100px solid transparent;
 }
 
@@ -50,7 +50,7 @@ body {
 	width: 30%;
 	background-color: #f4f1de;
 	margin: 24px 0;
-	border: 6px dashed #e07a5f;
+	border: 6px dashed #3d405b;
 }
 
 @keyframes tick {
@@ -104,4 +104,15 @@ input[type="text"] {
 	width: 30px;
 	height: 17px;
 	margin-left: 5px;
+}
+
+.set-tempo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20px;
+}
+
+#set-tempo-text {
+	width: 50px;
 }
